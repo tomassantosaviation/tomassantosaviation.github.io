@@ -1,240 +1,282 @@
-  <div class="header-links" aria-label="Secondary links">
-    <a href="about.html">About</a>
-    <a href="reports.html">Reports</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="nav-bar">
-  <nav class="container nav" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="articles.html" class="active">Articles</a>
-    <a href="reports.html">Reports</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</div>
-    <h1>Articles</h1>
+  <title>Articles | Tomás Santos Aviation</title>
 
-    <p>
-      Short aviation-related articles, notes and written observations focused on
-      pilot training, procedures, safety, technical preparation and operational discipline.
-    </p>
-  </div>
-</section>
+  <meta
+    name="description"
+    content="Articles by Tomás Santos Aviation — aviation safety, pilot training, procedures and technical aviation writing."
+  >
 
-<div class="container main-layout">
-  <div>
-    <section class="content-section">
-      <div class="section-label">Published article</div>
-      <h2>Why Procedure Discipline Matters Before Flight Training Begins</h2>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
 
-      <p class="lead">
-        A student pilot reflection on preparation, procedures, safety mindset and
-        the importance of building disciplined habits before formal integrated
-        ATPL(A) training begins.
-      </p>
+<body>
+  <div class="top-line"></div>
 
-      <div class="plain-box">
-        <h3>Article details</h3>
+  <header>
+    <div class="container header-main">
+      <a href="index.html" class="identity" aria-label="Tomás Santos Aviation homepage">
+        <img
+          src="assets/images/logo.png"
+          alt="Tomás Santos Aviation logo"
+          class="site-logo"
+        >
 
-        <p><strong>Date:</strong> June 2026</p>
-        <p><strong>Category:</strong> Pilot training / Aviation safety / Procedures</p>
-        <p><strong>Format:</strong> PDF article</p>
+        <div class="identity-text">
+          <strong>Tomás Santos Aviation</strong>
+          <span>Aviation training, safety and technical documentation</span>
+        </div>
+      </a>
+
+      <div class="header-links" aria-label="Secondary links">
+        <a href="about.html">About</a>
+        <a href="reports.html">Reports</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <nav class="container nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html" class="active">Articles</a>
+        <a href="reports.html">Reports</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container page-banner-inner">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / Articles
+        </div>
+
+        <h1>Articles</h1>
 
         <p>
-          This article is written from the perspective of a student preparing to
-          begin formal flight training. It is not intended as operational instruction,
-          but as a reflection on preparation, procedure discipline and training mindset.
-        </p>
-
-        <div class="button-row">
-          <a
-            href="assets/pdfs/procedure-discipline-before-flight-training.pdf"
-            class="button"
-            target="_blank"
-            rel="noopener"
-          >
-            Read PDF
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="section-label">Article archive</div>
-      <h2>Published writing</h2>
-
-      <p class="lead">
-        This page will act as an archive for aviation-related articles as they are
-        written, reviewed and published.
-      </p>
-
-      <div class="plain-box">
-        <h3>Current archive</h3>
-
-        <ul style="margin-left: 20px; color: #374151;">
-          <li>
-            <strong>Why Procedure Discipline Matters Before Flight Training Begins</strong>
-            — June 2026
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="section-label">Future subjects</div>
-      <h2>Article areas</h2>
-
-      <p class="lead">
-        Future articles will focus on practical aviation topics connected to training
-        preparation, safety awareness, procedures and professional development.
-      </p>
-
-      <div class="focus-grid">
-        <article class="focus-item">
-          <small>01</small>
-          <h3>Training preparation</h3>
-          <p>
-            Short articles about study habits, ATPL preparation, procedure discipline
-            and the transition from self-study to formal flight training.
-          </p>
-        </article>
-
-        <article class="focus-item">
-          <small>02</small>
-          <h3>Safety awareness</h3>
-          <p>
-            Notes on topics such as runway safety, unstable approaches, communication,
-            workload management and decision-making.
-          </p>
-        </article>
-
-        <article class="focus-item">
-          <small>03</small>
-          <h3>Aviation procedures</h3>
-          <p>
-            Written observations on VFR procedures, flight planning, instrument concepts,
-            EASA and FAA differences, and aviation documentation.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!--
-    FUTURE ARTICLE TEMPLATE
-
-    Copy this block when you want to add a new published article:
-
-    <section class="content-section">
-      <div class="section-label">Published article</div>
-      <h2>Article title here</h2>
-
-      <p class="lead">
-        Short summary of the article here.
-      </p>
-
-      <div class="plain-box">
-        <h3>Article details</h3>
-        <p><strong>Date:</strong> Month Year</p>
-        <p><strong>Category:</strong> Training / Safety / Procedures / Technical notes</p>
-        <p><strong>Format:</strong> PDF article</p>
-
-        <div class="button-row">
-          <a
-            href="assets/pdfs/file-name-here.pdf"
-            class="button"
-            target="_blank"
-            rel="noopener"
-          >
-            Read PDF
-          </a>
-        </div>
-      </div>
-    </section>
-
-    -->
-  </div>
-
-  <aside>
-    <section class="side-card">
-      <div class="side-card-title">Article status</div>
-      <div class="side-card-body">
-        <table class="profile-table">
-          <tr>
-            <th>Published</th>
-            <td>1 article</td>
-          </tr>
-          <tr>
-            <th>Latest</th>
-            <td>June 2026</td>
-          </tr>
-          <tr>
-            <th>Format</th>
-            <td>PDF articles and written notes</td>
-          </tr>
-          <tr>
-            <th>Focus</th>
-            <td>Pilot training, safety and aviation procedures</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="side-card">
-      <div class="side-card-title">Published articles</div>
-      <div class="side-card-body">
-        <ul class="quick-list">
-          <li>
-            <a
-              href="assets/pdfs/procedure-discipline-before-flight-training.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              Procedure Discipline Before Flight Training
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="side-card">
-      <div class="side-card-title">Future categories</div>
-      <div class="side-card-body">
-        <ul class="quick-list">
-          <li><a href="#">Training preparation</a></li>
-          <li><a href="#">Aviation safety</a></li>
-          <li><a href="#">VFR procedures</a></li>
-          <li><a href="#">Instrument concepts</a></li>
-          <li><a href="#">EASA and FAA differences</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="side-card">
-      <div class="side-card-title">Quick navigation</div>
-      <div class="side-card-body">
-        <ul class="quick-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Tomás Santos</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="reports.html">Reports</a></li>
-          <li><a href="cv.html">Curriculum vitae</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="side-card">
-      <div class="side-card-title">Note</div>
-      <div class="side-card-body">
-        <p class="status-note">
-          This page will be updated as new aviation articles are prepared,
-          reviewed and published.
+          Short aviation-related articles, notes and written observations focused on
+          pilot training, procedures, safety, technical preparation and operational discipline.
         </p>
       </div>
     </section>
-  </aside>
-</div>
+
+    <div class="container main-layout">
+      <div>
+        <section class="content-section">
+          <div class="section-label">Published article</div>
+
+          <h2>Why Procedure Discipline Matters Before Flight Training Begins</h2>
+
+          <p class="lead">
+            A student pilot reflection on preparation, procedures, safety mindset and
+            the importance of building disciplined habits before formal integrated
+            ATPL(A) training begins.
+          </p>
+
+          <div class="plain-box">
+            <h3>Article details</h3>
+
+            <p><strong>Date:</strong> June 2026</p>
+            <p><strong>Category:</strong> Pilot training / Aviation safety / Procedures</p>
+            <p><strong>Format:</strong> PDF article</p>
+
+            <p>
+              This article is written from the perspective of a student preparing to
+              begin formal flight training. It is not intended as operational instruction,
+              but as a reflection on preparation, procedure discipline and training mindset.
+            </p>
+
+            <div class="button-row">
+              <a
+                href="assets/pdfs/procedure-discipline-before-flight-training.pdf"
+                class="button"
+                target="_blank"
+                rel="noopener"
+              >
+                Read PDF
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Article archive</div>
+
+          <h2>Published writing</h2>
+
+          <p class="lead">
+            This page will act as an archive for aviation-related articles as they are
+            written, reviewed and published.
+          </p>
+
+          <div class="plain-box">
+            <h3>Current archive</h3>
+
+            <ul style="margin-left: 20px; color: #374151;">
+              <li>
+                <strong>Why Procedure Discipline Matters Before Flight Training Begins</strong>
+                — June 2026
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Future subjects</div>
+
+          <h2>Article areas</h2>
+
+          <p class="lead">
+            Future articles will focus on practical aviation topics connected to training
+            preparation, safety awareness, procedures and professional development.
+          </p>
+
+          <div class="focus-grid">
+            <article class="focus-item">
+              <small>01</small>
+
+              <h3>Training preparation</h3>
+
+              <p>
+                Short articles about study habits, ATPL preparation, procedure discipline
+                and the transition from self-study to formal flight training.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>02</small>
+
+              <h3>Safety awareness</h3>
+
+              <p>
+                Notes on topics such as runway safety, unstable approaches, communication,
+                workload management and decision-making.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>03</small>
+
+              <h3>Aviation procedures</h3>
+
+              <p>
+                Written observations on VFR procedures, flight planning, instrument concepts,
+                EASA and FAA differences, and aviation documentation.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="side-card">
+          <div class="side-card-title">Article status</div>
+
+          <div class="side-card-body">
+            <table class="profile-table">
+              <tr>
+                <th>Published</th>
+                <td>1 article</td>
+              </tr>
+
+              <tr>
+                <th>Latest</th>
+                <td>June 2026</td>
+              </tr>
+
+              <tr>
+                <th>Format</th>
+                <td>PDF articles and written notes</td>
+              </tr>
+
+              <tr>
+                <th>Focus</th>
+                <td>Pilot training, safety and aviation procedures</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">Published articles</div>
+
+          <div class="side-card-body">
+            <ul class="quick-list">
+              <li>
+                <a
+                  href="assets/pdfs/procedure-discipline-before-flight-training.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Procedure Discipline Before Flight Training
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">Future categories</div>
+
+          <div class="side-card-body">
+            <ul class="quick-list">
+              <li><a href="#">Training preparation</a></li>
+              <li><a href="#">Aviation safety</a></li>
+              <li><a href="#">VFR procedures</a></li>
+              <li><a href="#">Instrument concepts</a></li>
+              <li><a href="#">EASA and FAA differences</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">Quick navigation</div>
+
+          <div class="side-card-body">
+            <ul class="quick-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Tomás Santos</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="reports.html">Reports</a></li>
+              <li><a href="cv.html">Curriculum vitae</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">Note</div>
+
+          <div class="side-card-body">
+            <p class="status-note">
+              This page will be updated as new aviation articles are prepared,
+              reviewed and published.
+            </p>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>
+        <strong>Tomás Santos Aviation</strong> — Aviation training, safety and technical documentation.
+      </span>
+
+      <span>© 2026 Tomás Santos. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
+```
