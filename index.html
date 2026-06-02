@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Tomás Santos Aviation — aviation training, safety, procedures, data analysis and technical documentation portfolio."
+    content="Tomás Santos Aviation — aviation training, safety, procedures and technical documentation portfolio."
   />
 
   <style>
@@ -35,7 +35,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.55;
+      line-height: 1.58;
       font-size: 16px;
     }
 
@@ -87,7 +87,7 @@
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       letter-spacing: -0.04em;
     }
 
@@ -148,25 +148,22 @@
       text-decoration: none;
     }
 
-    .hero {
+    .page-banner {
       background:
-        linear-gradient(90deg, rgba(0, 59, 115, 0.92), rgba(0, 93, 170, 0.82)),
+        linear-gradient(90deg, rgba(0, 59, 115, 0.94), rgba(0, 93, 170, 0.82)),
         linear-gradient(135deg, #0b3d66, #2d6fa3);
       color: white;
-      min-height: 360px;
-      display: flex;
-      align-items: center;
     }
 
-    .hero-inner {
-      padding: 74px 0;
-      max-width: 850px;
+    .page-banner-inner {
+      padding: 72px 0 78px;
+      max-width: 900px;
     }
 
     .breadcrumb {
       color: rgba(255, 255, 255, 0.75);
       font-size: 0.86rem;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .breadcrumb a {
@@ -174,18 +171,18 @@
       font-weight: 700;
     }
 
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4.2rem);
+    .page-banner h1 {
+      font-size: clamp(2.4rem, 5vw, 4.15rem);
       line-height: 1.02;
       letter-spacing: -0.055em;
-      max-width: 780px;
+      max-width: 840px;
       margin-bottom: 22px;
     }
 
-    .hero p {
+    .page-banner p {
       font-size: 1.13rem;
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 760px;
+      color: rgba(255, 255, 255, 0.91);
+      max-width: 790px;
     }
 
     .main-layout {
@@ -206,7 +203,7 @@
 
     h2 {
       color: var(--text);
-      font-size: clamp(1.75rem, 3vw, 2.55rem);
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
       line-height: 1.1;
       letter-spacing: -0.04em;
       margin-bottom: 16px;
@@ -219,77 +216,76 @@
       margin-bottom: 8px;
     }
 
-    .intro {
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 32px;
-      font-size: 1.03rem;
+    p {
+      margin-bottom: 16px;
     }
 
-    .feature-grid {
+    .lead {
+      color: var(--muted);
+      max-width: 830px;
+      margin-bottom: 32px;
+      font-size: 1.04rem;
+    }
+
+    .content-section {
+      margin-bottom: 46px;
+    }
+
+    .content-section p {
+      color: #374151;
+      max-width: 850px;
+    }
+
+    .focus-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border: 1px solid var(--border);
-      margin-bottom: 44px;
+      margin-top: 24px;
     }
 
-    .feature {
+    .focus-item {
       padding: 24px;
-      min-height: 180px;
-      border-right: 1px solid var(--border);
       background: white;
+      border-right: 1px solid var(--border);
+      min-height: 165px;
     }
 
-    .feature:last-child {
+    .focus-item:last-child {
       border-right: none;
     }
 
-    .feature small {
+    .focus-item small {
       display: block;
       color: var(--gold);
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
 
-    .feature p {
+    .focus-item p {
       color: var(--muted);
       font-size: 0.96rem;
+      margin-bottom: 0;
     }
 
-    .updates {
-      border-top: 3px solid var(--blue-dark);
+    .statement-box {
+      border-left: 5px solid var(--gold);
+      background: #fff8e6;
+      padding: 22px 24px;
+      margin: 28px 0 0;
+      color: #374151;
+    }
+
+    .plain-box {
+      border: 1px solid var(--border);
       background: var(--soft-bg);
       padding: 28px;
-      margin-top: 12px;
+      margin-top: 24px;
     }
 
-    .update-item {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .update-item:first-of-type {
-      padding-top: 6px;
-    }
-
-    .update-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .date {
-      color: var(--muted);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .update-item p {
-      color: var(--muted);
-      font-size: 0.96rem;
+    .plain-box p:last-child {
+      margin-bottom: 0;
     }
 
     aside {
@@ -361,45 +357,10 @@
       border-bottom: none;
     }
 
-    .document-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .document {
-      display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 18px;
-      padding: 18px;
-      border: 1px solid var(--border);
-      background: white;
-    }
-
-    .doc-type {
-      background: var(--blue-light);
-      color: var(--blue-dark);
-      font-weight: 800;
-      font-size: 0.84rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 70px;
-      text-align: center;
-      padding: 8px;
-    }
-
-    .document p {
+    .status-note {
+      font-size: 0.94rem;
       color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .notice {
-      margin-top: 44px;
-      padding: 20px 24px;
-      border-left: 5px solid var(--gold);
-      background: #fff8e6;
-      color: #4b5563;
+      margin-bottom: 0;
     }
 
     footer {
@@ -437,21 +398,17 @@
         grid-template-columns: 1fr;
       }
 
-      .feature-grid {
+      .focus-grid {
         grid-template-columns: 1fr;
       }
 
-      .feature {
+      .focus-item {
         border-right: none;
         border-bottom: 1px solid var(--border);
       }
 
-      .feature:last-child {
+      .focus-item:last-child {
         border-bottom: none;
-      }
-
-      .document {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -467,15 +424,15 @@
       .mark {
         width: 46px;
         height: 46px;
-        font-size: 0.92rem;
+        font-size: 0.95rem;
       }
 
       .identity-text strong {
         font-size: 1.25rem;
       }
 
-      .hero-inner {
-        padding: 54px 0;
+      .page-banner-inner {
+        padding: 52px 0 58px;
       }
 
       .nav a {
@@ -491,7 +448,7 @@
   <header>
     <div class="container header-main">
       <a href="index.html" class="identity" aria-label="Tomás Santos Aviation homepage">
-        <div class="mark">TSA</div>
+        <div class="mark">TS</div>
         <div class="identity-text">
           <strong>Tomás Santos Aviation</strong>
           <span>Aviation training, safety and technical documentation</span>
@@ -519,141 +476,127 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
+    <section class="page-banner">
+      <div class="container page-banner-inner">
         <div class="breadcrumb">
           <a href="index.html">Home</a> / Portfolio
         </div>
 
-        <h1>Aviation training, safety and technical analysis.</h1>
+        <h1>Aviation training, safety and technical documentation.</h1>
 
         <p>
-          This website documents my development as a Portuguese aviation student
-          preparing for integrated ATPL training, with a focus on procedure discipline,
-          aviation safety, data-informed study and professional technical documentation.
+          A professional portfolio documenting my preparation for integrated ATPL(A)
+          training, my study of aviation procedures, and my development in technical
+          reporting, safety-focused research and aviation analysis.
         </p>
       </div>
     </section>
 
     <div class="container main-layout">
       <div>
-        <section>
+        <section class="content-section">
           <div class="section-label">Overview</div>
-          <h2>Portfolio purpose</h2>
+          <h2>Purpose of this website</h2>
 
-          <p class="intro">
-            Tomás Santos Aviation is a professional portfolio created to organize
-            aviation study, technical projects, written reports and training progress.
-            The aim is to build a clear record of serious aviation development over time,
-            supported by structured documentation and reliable public sources.
+          <p class="lead">
+            Tomás Santos Aviation is the central place where I organize my aviation
+            development. The website is currently in its early stage and will be expanded
+            as my training progresses and as written work, technical projects and aviation
+            reports are completed.
           </p>
 
-          <div class="feature-grid">
-            <article class="feature">
+          <p>
+            The objective is simple: to build a serious, verifiable and well-organized
+            record of my development as an aviation student. This includes preparation
+            for formal flight training, study of aviation procedures, safety-related
+            writing, and technical documentation using tools such as Python and XeLaTeX.
+          </p>
+
+          <div class="statement-box">
+            <strong>Current stage:</strong>
+            this portfolio is being built before the start of formal integrated ATPL(A)
+            training. Some sections are already online, while reports and projects will
+            be added only when they are ready to be published properly.
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Main areas</div>
+          <h2>Current focus</h2>
+
+          <p class="lead">
+            The portfolio is structured around three areas that I consider important
+            for serious aviation development: training preparation, safety culture and
+            technical documentation.
+          </p>
+
+          <div class="focus-grid">
+            <article class="focus-item">
               <small>01</small>
-              <h3>Pilot training</h3>
+              <h3>Training preparation</h3>
               <p>
-                Preparation for integrated ATPL training, including aviation theory,
-                procedure study, operational discipline and future training milestones.
+                Building a disciplined foundation before integrated ATPL(A) training,
+                with attention to aviation theory, procedures, planning and study habits.
               </p>
             </article>
 
-            <article class="feature">
+            <article class="focus-item">
               <small>02</small>
               <h3>Aviation safety</h3>
               <p>
-                Articles and reports focused on safety-relevant topics such as runway
-                incursions, unstable approaches, communication discipline and pilot decision-making.
+                Developing interest in safety culture, human factors, communication,
+                decision-making and the procedural discipline required in flight operations.
               </p>
             </article>
 
-            <article class="feature">
+            <article class="focus-item">
               <small>03</small>
-              <h3>Technical documentation</h3>
+              <h3>Technical work</h3>
               <p>
-                Use of Python, XeLaTeX and structured reporting methods to produce
-                clean aviation analysis, references, charts and technical documents.
+                Using technical tools and structured writing to produce clear notes,
+                references, reports and future aviation-related analysis.
               </p>
             </article>
           </div>
         </section>
 
-        <section>
-          <div class="section-label">Work in progress</div>
-          <h2>Initial reports and projects</h2>
+        <section class="content-section">
+          <div class="section-label">Professional direction</div>
+          <h2>Long-term aviation development</h2>
 
-          <p class="intro">
-            The first phase of this portfolio will focus on written aviation safety
-            work and small technical projects. Each item will be developed, reviewed
-            and improved before being published.
+          <p>
+            My long-term goal is to develop as a professional pilot with strong
+            procedural discipline and a serious safety mindset. I am especially interested
+            in airline operations, pilot training, flight planning, instrument flying,
+            human factors, CRM, aviation data analysis and the differences between EASA
+            and FAA procedures.
           </p>
 
-          <div class="document-list">
-            <article class="document">
-              <div class="doc-type">REPORT</div>
-              <div>
-                <h3>Runway incursion prevention and student pilot training</h3>
-                <p>
-                  Planned report reviewing runway incursion prevention from the
-                  perspective of early-stage pilot training and operational discipline.
-                </p>
-              </div>
-            </article>
+          <p>
+            This website will grow gradually. It is not intended to appear finished
+            before the work exists. Instead, it will serve as a public record of progress,
+            with each future article, report or project added when it meets a professional
+            standard.
+          </p>
+        </section>
 
-            <article class="document">
-              <div class="doc-type">STUDY</div>
-              <div>
-                <h3>EASA and FAA VFR procedures: selected comparison</h3>
-                <p>
-                  Planned comparison of selected VFR procedures, airspace concepts,
-                  phraseology habits and training implications between European and
-                  United States aviation environments.
-                </p>
-              </div>
-            </article>
+        <section class="content-section">
+          <div class="section-label">Website status</div>
+          <h2>Early-stage portfolio</h2>
 
-            <article class="document">
-              <div class="doc-type">DATA</div>
-              <div>
-                <h3>Basic aviation safety data analysis</h3>
-                <p>
-                  Planned technical project using Python to organize public aviation
-                  safety information into clear charts, tables and written observations.
-                </p>
-              </div>
-            </article>
+          <div class="plain-box">
+            <p>
+              This website has recently been launched and is still being structured.
+              The About page is available, and the remaining sections will be developed
+              as the portfolio grows.
+            </p>
+
+            <p>
+              Reports, articles and technical projects will not be listed as completed
+              until they are actually written, reviewed and ready for publication.
+            </p>
           </div>
         </section>
-
-        <section class="updates">
-          <div class="section-label">Latest updates</div>
-          <h2>Development log</h2>
-
-          <article class="update-item">
-            <div class="date">June 2026</div>
-            <h3>Website launched</h3>
-            <p>
-              Initial version of Tomás Santos Aviation published as a professional
-              aviation portfolio.
-            </p>
-          </article>
-
-          <article class="update-item">
-            <div class="date">June 2026</div>
-            <h3>Portfolio structure in development</h3>
-            <p>
-              Core sections created for reports, articles, projects, curriculum vitae
-              and contact information.
-            </p>
-          </article>
-        </section>
-
-        <div class="notice">
-          <strong>Note:</strong>
-          This website is an early-stage aviation portfolio. Information will be
-          expanded as formal training begins and as reports, projects and references
-          are added.
-        </div>
       </div>
 
       <aside>
@@ -661,9 +604,10 @@
           <div class="side-card-title">Quick navigation</div>
           <div class="side-card-body">
             <ul class="quick-list">
-              <li><a href="reports.html">Reports and publications</a></li>
-              <li><a href="projects.html">Technical projects</a></li>
+              <li><a href="about.html">About Tomás Santos</a></li>
+              <li><a href="projects.html">Projects</a></li>
               <li><a href="articles.html">Articles</a></li>
+              <li><a href="reports.html">Reports</a></li>
               <li><a href="cv.html">Curriculum vitae</a></li>
               <li><a href="contact.html">Contact information</a></li>
             </ul>
@@ -684,11 +628,11 @@
               </tr>
               <tr>
                 <th>Current stage</th>
-                <td>Preparing for integrated ATPL training</td>
+                <td>Preparing for integrated ATPL(A) training</td>
               </tr>
               <tr>
                 <th>Focus</th>
-                <td>Aviation training, safety and technical documentation</td>
+                <td>Aviation procedures, safety, training preparation and technical documentation</td>
               </tr>
               <tr>
                 <th>Tools</th>
@@ -699,13 +643,12 @@
         </section>
 
         <section class="side-card">
-          <div class="side-card-title">Current priorities</div>
+          <div class="side-card-title">Publication status</div>
           <div class="side-card-body">
-            <ul class="quick-list">
-              <li><a href="reports.html">Prepare first aviation safety report</a></li>
-              <li><a href="projects.html">Organize technical project structure</a></li>
-              <li><a href="cv.html">Build aviation-focused CV</a></li>
-            </ul>
+            <p class="status-note">
+              No reports or articles are listed as completed yet. Content will be added
+              only after it is properly prepared and ready for publication.
+            </p>
           </div>
         </section>
       </aside>
