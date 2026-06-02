@@ -1,6 +1,6 @@
 :root {
-  --blue-dark: #003b73;
-  --blue-main: #005daa;
+  --blue-dark: #003e6b;
+  --blue-main: #1f5f99;
   --blue-light: #e8f1fb;
   --gold: #d6a329;
   --text: #111827;
@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.58;
@@ -139,9 +139,7 @@ header {
 /* Page banner */
 
 .page-banner {
-  background:
-    linear-gradient(90deg, rgba(0, 59, 115, 0.94), rgba(0, 93, 170, 0.82)),
-    linear-gradient(135deg, #0b3d66, #2d6fa3);
+  background: var(--blue-dark);
   color: white;
 }
 
@@ -162,17 +160,19 @@ header {
 }
 
 .page-banner h1 {
-  font-size: clamp(2.4rem, 5vw, 4.15rem);
-  line-height: 1.02;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.2rem, 4.2vw, 3.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 700;
   max-width: 840px;
   margin-bottom: 22px;
 }
 
 .page-banner p {
-  font-size: 1.13rem;
-  color: rgba(255, 255, 255, 0.91);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.92);
   max-width: 790px;
+  font-weight: 400;
 }
 
 /* Layout */
