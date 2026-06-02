@@ -1,23 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Tomás Santos Aviation</title>
+
+  <meta
+    name="description"
+    content="Tomás Santos Aviation — pilot training, aviation safety, simulation, and technical analysis portfolio by a Portuguese aviation student preparing for integrated ATPL training."
+  />
+
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #5f6b7a;
+      --border: #d9e1ec;
+      --primary: #0b3d66;
+      --primary-light: #155e99;
+      --accent: #c9a227;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(246, 248, 251, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand strong {
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--primary);
+    }
+
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .nav-button {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+    }
+
+    .nav-button:hover {
+      color: white;
+      background: var(--primary-light);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 92px 0 72px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: white;
+      color: var(--primary);
+      font-size: 0.86rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      color: #0f172a;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 670px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .hero-note {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #ffffff, #eef4fa);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .instrument {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: #0f172a;
+      color: white;
+      padding: 26px;
+      margin-bottom: 18px;
+    }
+
+    .instrument-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+      color: #cbd5e1;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .altitude {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .altitude span {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      letter-spacing: normal;
+      margin-left: 6px;
+    }
+
+    .instrument-line {
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #38bdf8);
+      margin: 24px 0 12px;
+    }
+
+    .instrument-caption {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    .status-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .status-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .status-item strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .status-item span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading span {
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .projects {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 22px;
+      align-items: start;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #f8fafc;
+    }
+
+    .project-label {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .project h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .timeline-item strong {
+      color: var(--primary);
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .cta {
+      padding: 72px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--primary), #092941);
+      color: white;
+      border-radius: 28px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      color: #cbd5e1;
+      max-width: 700px;
+    }
+
+    .cta-box .button {
+      background: white;
+      color: var(--primary);
+      border-color: white;
+      white-space: nowrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .split,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 64px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Tomás Santos Aviation</h1>
-  <p>Pilot Training | Aviation Safety | Simulation & Technical Analysis</p>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <strong>Tomás Santos Aviation</strong>
+        <span>Pilot Training | Safety | Technical Analysis</span>
+      </a>
 
-  <h2>About</h2>
-  <p>
-    Portuguese aviation student preparing to begin integrated ATPL training,
-    focused on aviation safety, pilot training, flight simulation, and technical analysis.
-  </p>
+      <nav aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="reports.html">Reports</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Projects</h2>
-  <p>Coming soon: aviation safety reports, simulation scenarios, and technical analysis projects.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Aviation portfolio in development
+          </div>
 
-  <h2>Contact</h2>
-  <p>Contact information coming soon.</p>
+          <h1>Aviation safety, pilot training, and technical analysis.</h1>
+
+          <p>
+            I am a Portuguese aviation student preparing to begin integrated ATPL
+            training. This portfolio documents my aviation studies, safety-focused
+            research, structured flight simulation work, and technical projects using
+            tools such as Python and XeLaTeX.
+          </p>
+
+          <div class="hero-actions">
+            <a href="projects.html" class="button button-primary">View Projects</a>
+            <a href="reports.html" class="button button-secondary">Read Reports</a>
+          </div>
+
+          <p class="hero-note">
+            Current focus: building a serious foundation in aviation safety,
+            procedure discipline, simulation-based learning, and technical documentation.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-label="Portfolio status">
+          <div class="instrument">
+            <div class="instrument-top">
+              <span>Training Phase</span>
+              <span>ATPL Prep</span>
+            </div>
+
+            <div class="altitude">2026<span>START</span></div>
+
+            <div class="instrument-line"></div>
+
+            <p class="instrument-caption">
+              Portfolio launch focused on early aviation research, simulation scenarios,
+              and technical documentation before formal integrated ATPL training.
+            </p>
+          </div>
+
+          <div class="status-list">
+            <div class="status-item">
+              <strong>Technical Skills</strong>
+              <span>Python, XeLaTeX, scripts, PC systems, documentation</span>
+            </div>
+
+            <div class="status-item">
+              <strong>Aviation Focus</strong>
+              <span>VFR procedures, ATPL preparation, safety analysis</span>
+            </div>
+
+            <div class="status-item">
+              <strong>Simulation</strong>
+              <span>X-Plane 12 structured flight environments and scenario design</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <span>Focus Areas</span>
+          <h2>Building a serious aviation foundation.</h2>
+          <p>
+            This website is designed to organize my aviation development into clear,
+            verifiable areas: training, safety, simulation, and technical analysis.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Pilot Training</h3>
+            <p>
+              Documenting my preparation for integrated ATPL training, including
+              procedure study, aviation knowledge, and future flight training progress.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Aviation Safety</h3>
+            <p>
+              Developing reports and articles on topics such as runway safety,
+              unstable approaches, communication discipline, and pilot decision-making.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Technical Analysis</h3>
+            <p>
+              Using Python, XeLaTeX, and structured documentation to create aviation
+              projects, reports, data analysis, and simulation-based learning material.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container">
+        <div class="section-heading">
+          <span>Initial Projects</span>
+          <h2>Planned work, built step by step.</h2>
+          <p>
+            The first projects will focus on aviation safety, EASA/FAA procedure
+            comparison, and structured simulation scenarios.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-label">Project 01</div>
+            <div>
+              <h3>U.S. Runway Incursion Safety Review</h3>
+              <p>
+                A planned safety analysis project focused on runway incursion prevention,
+                student pilot awareness, and practical training lessons based on public
+                aviation safety material.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Safety</span>
+                <span class="tag">Python</span>
+                <span class="tag">Report</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-label">Project 02</div>
+            <div>
+              <h3>EASA vs FAA VFR Procedures Comparison</h3>
+              <p>
+                A comparative study of selected VFR procedures, airspace concepts,
+                phraseology habits, and training implications between European and
+                U.S. aviation environments.
+              </p>
+              <div class="tag-row">
+                <span class="tag">VFR</span>
+                <span class="tag">EASA</span>
+                <span class="tag">FAA</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-label">Project 03</div>
+            <div>
+              <h3>X-Plane 12 Safety Scenario Pack</h3>
+              <p>
+                A set of structured flight simulation scenarios focused on decision-making,
+                unstable approaches, abnormal situations, workload management, and
+                post-flight debriefing.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Simulation</span>
+                <span class="tag">X-Plane 12</span>
+                <span class="tag">Training</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container split">
+        <div class="section-heading">
+          <span>Development Path</span>
+          <h2>From preparation to professional evidence.</h2>
+          <p>
+            The goal is to build a public record of disciplined aviation development:
+            not random posts, but serious work that can be reviewed, improved, and
+            expanded over time.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Phase 1 — Portfolio Setup</strong>
+            <p>
+              Launch the website, organize projects, prepare the first reports, and
+              create a clean professional structure.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Phase 2 — Safety Writing</strong>
+            <p>
+              Publish aviation safety articles and short reports focused on procedure
+              discipline, student pilot training, and operational risk.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Phase 3 — Technical Projects</strong>
+            <p>
+              Build Python-based analysis projects, structured simulation scenarios,
+              and well-formatted XeLaTeX reports.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <strong>Phase 4 — ATPL Training Documentation</strong>
+            <p>
+              Document formal training progress, lessons learned, technical work, and
+              professional development during integrated ATPL training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Follow the development of this aviation portfolio.</h2>
+            <p>
+              Reports, articles, simulation scenarios, and technical projects will be
+              added as the portfolio develops.
+            </p>
+          </div>
+
+          <a href="contact.html" class="button">Get in Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© 2026 Tomás Santos Aviation. All rights reserved.</span>
+      <span>tomassantosaviation.com</span>
+    </div>
+  </footer>
 </body>
 </html>
