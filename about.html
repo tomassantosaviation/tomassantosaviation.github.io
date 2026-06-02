@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About | Tomás Santos Aviation</title>
+
+  <meta
+    name="description"
+    content="About Tomás Santos — Portuguese aviation student preparing for integrated ATPL(A) training, focused on aviation procedures, pilot training, safety, flight planning and technical documentation."
+  />
+
+  <style>
+    :root {
+      --blue-dark: #003b73;
+      --blue-main: #005daa;
+      --blue-light: #e8f1fb;
+      --gold: #d6a329;
+      --text: #111827;
+      --muted: #5b6472;
+      --border: #d7dce3;
+      --bg: #ffffff;
+      --soft-bg: #f4f6f8;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.58;
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--blue-main);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .top-line {
+      height: 5px;
+      background: var(--blue-dark);
+    }
+
+    .container {
+      width: min(100% - 48px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-main {
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .identity {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 4px;
+      background: var(--blue-dark);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.04em;
+    }
+
+    .identity-text strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .identity-text span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .header-links a {
+      color: var(--blue-dark);
+    }
+
+    .nav-bar {
+      background: var(--blue-main);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+    }
+
+    .nav a {
+      color: white;
+      padding: 15px 22px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-right: 1px solid rgba(255, 255, 255, 0.22);
+      white-space: nowrap;
+    }
+
+    .nav a:first-child {
+      border-left: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      background: var(--blue-dark);
+      text-decoration: none;
+    }
+
+    .page-banner {
+      background:
+        linear-gradient(90deg, rgba(0, 59, 115, 0.94), rgba(0, 93, 170, 0.82)),
+        linear-gradient(135deg, #0b3d66, #2d6fa3);
+      color: white;
+    }
+
+    .page-banner-inner {
+      padding: 68px 0 72px;
+      max-width: 870px;
+    }
+
+    .breadcrumb {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.86rem;
+      margin-bottom: 26px;
+    }
+
+    .breadcrumb a {
+      color: white;
+      font-weight: 700;
+    }
+
+    .page-banner h1 {
+      font-size: clamp(2.4rem, 5vw, 4.1rem);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      max-width: 800px;
+      margin-bottom: 22px;
+    }
+
+    .page-banner p {
+      font-size: 1.13rem;
+      color: rgba(255, 255, 255, 0.91);
+      max-width: 780px;
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 42px;
+      padding: 58px 0 72px;
+    }
+
+    .section-label {
+      color: var(--blue-main);
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--text);
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      color: var(--blue-dark);
+      font-size: 1.22rem;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 790px;
+      margin-bottom: 32px;
+      font-size: 1.04rem;
+    }
+
+    .content-section {
+      margin-bottom: 46px;
+    }
+
+    .content-section p {
+      color: #374151;
+      max-width: 850px;
+    }
+
+    .highlight-box {
+      border-left: 5px solid var(--gold);
+      background: #fff8e6;
+      padding: 22px 24px;
+      margin: 28px 0;
+      color: #374151;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    .focus-item {
+      padding: 22px 24px;
+      background: white;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      min-height: 140px;
+    }
+
+    .focus-item:nth-child(2n) {
+      border-right: none;
+    }
+
+    .focus-item:nth-last-child(-n + 2) {
+      border-bottom: none;
+    }
+
+    .focus-item small {
+      display: block;
+      color: var(--gold);
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .focus-item p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-bottom: 0;
+    }
+
+    .timeline {
+      border-top: 3px solid var(--blue-dark);
+      background: var(--soft-bg);
+      padding: 28px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 22px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-item:first-of-type {
+      padding-top: 4px;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .timeline-year {
+      color: var(--blue-dark);
+      font-weight: 800;
+      font-size: 0.96rem;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    aside {
+      align-self: start;
+    }
+
+    .side-card {
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      background: white;
+    }
+
+    .side-card-title {
+      background: var(--blue-dark);
+      color: white;
+      padding: 18px 20px;
+      font-weight: 800;
+      font-size: 1.08rem;
+    }
+
+    .side-card-body {
+      padding: 20px;
+    }
+
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+
+    .profile-table th {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 700;
+      width: 38%;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .profile-table td {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+
+    .profile-table tr:last-child th,
+    .profile-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .quick-list {
+      list-style: none;
+    }
+
+    .quick-list li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quick-list li:last-child {
+      border-bottom: none;
+    }
+
+    .quick-list a {
+      display: block;
+      padding: 13px 0;
+      color: var(--blue-dark);
+      font-weight: 700;
+    }
+
+    .placeholder-note {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 16px;
+      border: 1px solid var(--blue-main);
+      background: var(--blue-main);
+      color: white;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--blue-main);
+    }
+
+    .button:hover {
+      background: var(--blue-dark);
+      color: white;
+      text-decoration: none;
+      border-color: var(--blue-dark);
+    }
+
+    .future-photo {
+      display: none;
+    }
+
+    footer {
+      background: #f1f3f5;
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner strong {
+      color: var(--blue-dark);
+    }
+
+    @media (max-width: 900px) {
+      .header-main {
+        height: auto;
+        padding: 22px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .header-links {
+        flex-wrap: wrap;
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-item,
+      .focus-item:nth-child(2n),
+      .focus-item:nth-last-child(-n + 2) {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .focus-item:last-child {
+        border-bottom: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .identity {
+        align-items: flex-start;
+      }
+
+      .mark {
+        width: 46px;
+        height: 46px;
+        font-size: 0.92rem;
+      }
+
+      .identity-text strong {
+        font-size: 1.25rem;
+      }
+
+      .page-banner-inner {
+        padding: 52px 0 58px;
+      }
+
+      .nav a {
+        padding: 13px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-line"></div>
+
+  <header>
+    <div class="container header-main">
+      <a href="index.html" class="identity" aria-label="Tomás Santos Aviation homepage">
+        <div class="mark">TSA</div>
+        <div class="identity-text">
+          <strong>Tomás Santos Aviation</strong>
+          <span>Aviation training, safety and technical documentation</span>
+        </div>
+      </a>
+
+      <div class="header-links" aria-label="Secondary links">
+        <a href="about.html">About</a>
+        <a href="reports.html">Reports</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <nav class="container nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="reports.html">Reports</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container page-banner-inner">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / About
+        </div>
+
+        <h1>About Tomás Santos</h1>
+
+        <p>
+          Portuguese aviation student preparing to begin integrated ATPL(A) training
+          at a local aerodrome in Portugal, with a focus on aviation procedures,
+          pilot training, safety culture and technical documentation.
+        </p>
+      </div>
+    </section>
+
+    <div class="container main-layout">
+      <div>
+        <section class="content-section">
+          <div class="section-label">Background</div>
+          <h2>Early interest in aviation</h2>
+
+          <p class="lead">
+            I was born and raised in Lisbon, Portugal. My interest in aviation began
+            at a young age, when I first used Microsoft Flight Simulator X with an
+            old joystick that belonged to my father. What started as curiosity quickly
+            developed into a long-term ambition to study aviation seriously and build
+            a career in this field.
+          </p>
+
+          <p>
+            Since then, flight simulation has remained part of my aviation self-study,
+            not as a substitute for formal flight training, but as a way to develop
+            familiarity with procedures, cockpit workflows, navigation concepts and
+            operational discipline. Over time, I have used several desktop simulation
+            platforms, including FSX, X-Plane 11, Microsoft Flight Simulator 2020,
+            Microsoft Flight Simulator 2024 and X-Plane 12.
+          </p>
+
+          <p>
+            From 2023 onward, I began taking aviation study more seriously, actively
+            researching, reading and learning about pilot training, flight operations,
+            aviation procedures and the wider structure of the airline industry.
+            This website is part of that same effort: a place to organize my work,
+            document my progress and develop a more professional approach to aviation study.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Training path</div>
+          <h2>Preparation for integrated ATPL(A) training</h2>
+
+          <p>
+            Having completed my pre-university academic path in Portugal, I am now
+            preparing to begin integrated ATPL(A) training at a local aerodrome later
+            this year. Before starting formal classes, I have already been building
+            familiarity with ATPL theory, aviation procedures and the operational
+            environment around my future training area.
+          </p>
+
+          <p>
+            My current preparation is focused on developing a disciplined foundation
+            before formal training begins. This includes aviation theory review,
+            Portuguese VFR procedure study, flight planning concepts, phraseology,
+            navigation basics and a growing interest in the technical and human factors
+            that influence safe flight operations.
+          </p>
+
+          <div class="highlight-box">
+            <strong>Current objective:</strong>
+            to begin formal training with a serious study routine, strong procedural
+            discipline and a clear understanding that aviation is not only about flying
+            an aircraft, but also about preparation, judgment, communication and safety.
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Areas of interest</div>
+          <h2>Aviation focus areas</h2>
+
+          <p>
+            My aviation interests are centered on the areas that connect pilot training
+            with real operational performance. I am especially interested in how good
+            procedures, good instruction and good decision-making can shape safer and
+            more capable pilots.
+          </p>
+
+          <div class="focus-grid">
+            <article class="focus-item">
+              <small>Operations</small>
+              <h3>Airline operations</h3>
+              <p>
+                Interest in how airlines operate safely and efficiently, including
+                standard procedures, operational planning and crew coordination.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>Training</small>
+              <h3>Pilot training</h3>
+              <p>
+                Focus on how cadets and early-stage pilots are trained, supported
+                and prepared for professional flight operations.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>Procedures</small>
+              <h3>VFR and instrument flying</h3>
+              <p>
+                Study of VFR procedures, flight planning, instrument flying concepts
+                and the procedural discipline required in both visual and instrument environments.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>Safety</small>
+              <h3>Human factors and CRM</h3>
+              <p>
+                Interest in decision-making, workload management, communication,
+                crew resource management and the human side of aviation safety.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>Analysis</small>
+              <h3>Aviation data analysis</h3>
+              <p>
+                Use of technical tools to organize aviation information, produce
+                clear reports and support structured safety-related study.
+              </p>
+            </article>
+
+            <article class="focus-item">
+              <small>Systems</small>
+              <h3>EASA and FAA differences</h3>
+              <p>
+                As a future EASA-trained pilot, I maintain a strong interest in the
+                FAA system, especially the differences in procedures, training culture
+                and operational practices.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Long-term direction</div>
+          <h2>Professional goals</h2>
+
+          <p>
+            My long-term goal is to develop as a professional pilot with a strong
+            safety culture, eventually progressing toward command responsibility.
+            Beyond line flying, I am also interested in pilot training and cadet
+            development. Every professional pilot begins as a student, and I believe
+            early-stage pilots deserve serious instruction, clear guidance and instructors
+            who understand the responsibility of shaping future crews.
+          </p>
+
+          <p>
+            For that reason, I want my aviation development to include more than
+            license progression alone. I want to build knowledge in procedures,
+            safety, training methods, human factors and technical documentation, so
+            that my future work can be useful both inside the cockpit and in training
+            or mentoring environments.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <div class="section-label">Development timeline</div>
+          <h2>Current stage</h2>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-year">Childhood</div>
+              <div>
+                <h3>First exposure to aviation</h3>
+                <p>
+                  Early interest began through desktop flight simulation and gradually
+                  developed into a serious ambition to pursue aviation as a career.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-year">2023 onward</div>
+              <div>
+                <h3>Structured aviation study</h3>
+                <p>
+                  Began actively researching pilot training, airline operations,
+                  aviation procedures and flight safety topics in greater depth.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-year">2026</div>
+              <div>
+                <h3>Portfolio launch</h3>
+                <p>
+                  Launched Tomás Santos Aviation to organize reports, articles,
+                  technical projects and training-related documentation.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-year">Next step</div>
+              <div>
+                <h3>Integrated ATPL(A) training</h3>
+                <p>
+                  Preparing to begin formal integrated ATPL(A) training at a local
+                  aerodrome in Portugal.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <!-- Future profile image placeholder:
+        <section class="side-card future-photo">
+          <img src="assets/images/profile.jpg" alt="Tomás Santos" style="width:100%; display:block;">
+        </section>
+        -->
+
+        <section class="side-card">
+          <div class="side-card-title">Profile summary</div>
+          <div class="side-card-body">
+            <table class="profile-table">
+              <tr>
+                <th>Name</th>
+                <td>Tomás Santos</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Lisbon, Portugal</td>
+              </tr>
+              <tr>
+                <th>Current stage</th>
+                <td>Preparing for integrated ATPL(A) training</td>
+              </tr>
+              <tr>
+                <th>Focus</th>
+                <td>Aviation procedures, pilot training, safety and technical documentation</td>
+              </tr>
+              <tr>
+                <th>Technical tools</th>
+                <td>Python, XeLaTeX and structured report writing</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">Core interests</div>
+          <div class="side-card-body">
+            <ul class="quick-list">
+              <li><a href="projects.html">Airline operations</a></li>
+              <li><a href="projects.html">Pilot training and cadet development</a></li>
+              <li><a href="articles.html">VFR and instrument procedures</a></li>
+              <li><a href="reports.html">Human factors and CRM</a></li>
+              <li><a href="reports.html">EASA and FAA procedural differences</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">External links</div>
+          <div class="side-card-body">
+            <p class="placeholder-note">
+              Professional links will be added as this portfolio develops.
+            </p>
+
+            <div class="button-row">
+              <!-- Replace # with your GitHub profile URL when ready -->
+              <a href="#" class="button secondary">GitHub</a>
+
+              <!-- Replace # with your LinkedIn profile URL when ready -->
+              <a href="#" class="button secondary">LinkedIn</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="side-card">
+          <div class="side-card-title">Quick navigation</div>
+          <div class="side-card-body">
+            <ul class="quick-list">
+              <li><a href="reports.html">Reports</a></li>
+              <li><a href="articles.html">Articles</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="cv.html">Curriculum vitae</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span><strong>Tomás Santos Aviation</strong> — Aviation training, safety and technical documentation.</span>
+      <span>© 2026 Tomás Santos. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
