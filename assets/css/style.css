@@ -1,12 +1,13 @@
 :root {
-  --blue: #0047ba;
-  --blue-dark: #003b73;
-  --orange: #df4b2f;
-  --text: #111111;
-  --muted: #4b5563;
-  --light-muted: #6b7280;
-  --border: #dddddd;
-  --soft-bg: #f3f3f3;
+  --blue: #0057b8;
+  --blue-dark: #002f5f;
+  --blue-soft: #eef4fb;
+  --orange: #d94f2b;
+  --text: #0b0f14;
+  --muted: #374151;
+  --light-muted: #5f6b7a;
+  --border: #cfd6df;
+  --soft-bg: #f5f7fa;
   --bg: #ffffff;
   --max-width: 1180px;
 }
@@ -48,6 +49,7 @@ a:hover {
 
 header {
   background: #ffffff;
+  border-top: 4px solid var(--blue-dark);
   border-bottom: 1px solid var(--border);
 }
 
@@ -140,13 +142,13 @@ header {
 }
 
 .nav a:hover {
-  color: var(--blue);
-  background: #ffffff;
+  color: white;
+  background: var(--blue);
   text-decoration: none;
 }
 
 .nav a.active {
-  background: var(--orange);
+  background: var(--blue-dark);
   color: white;
   text-decoration: none;
 }
@@ -154,13 +156,13 @@ header {
 /* Page title area — no blue hero */
 
 .page-banner {
-  background: #ffffff;
+  background: var(--soft-bg);
   color: var(--text);
   border-bottom: 1px solid var(--border);
 }
 
 .page-banner-inner {
-  padding: 34px 0 34px;
+  padding: 42px 0 42px;
   max-width: 980px;
 }
 
@@ -178,9 +180,9 @@ header {
 .page-banner h1 {
   font-size: clamp(2rem, 4.4vw, 3.1rem);
   line-height: 1.08;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   font-weight: 800;
-  color: #111111;
+  color: var(--blue-dark);
   max-width: 1000px;
   margin-bottom: 18px;
 }
@@ -206,12 +208,14 @@ header {
 }
 
 .section-label {
-  color: var(--blue);
+  color: var(--blue-dark);
   font-weight: 800;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 9px;
+  border-left: 4px solid var(--blue);
+  padding-left: 10px;
 }
 
 h2 {
@@ -291,11 +295,11 @@ p {
 
 .statement-box,
 .highlight-box {
-  border-left: 4px solid var(--orange);
-  background: #fafafa;
+  border-left: 4px solid var(--blue);
+  background: var(--blue-soft);
   padding: 18px 22px;
   margin: 24px 0 0;
-  color: #222222;
+  color: #1f2937;
 }
 
 .highlight-box {
@@ -358,10 +362,10 @@ aside {
 }
 
 .side-card-title {
-  background: #ffffff;
-  color: #111111;
-  border-bottom: 3px solid var(--blue);
-  padding: 16px 18px 13px;
+  background: var(--blue-dark);
+  color: white;
+  border-bottom: none;
+  padding: 16px 18px;
   font-weight: 800;
   font-size: 1rem;
 }
