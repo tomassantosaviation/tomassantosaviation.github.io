@@ -1,13 +1,13 @@
 :root {
-  --blue: #0057b8;
-  --blue-dark: #0a3161;
-  --blue-soft: #eef4fb;
-  --orange: #b31942;
-  --text: #0b0f14;
-  --muted: #374151;
-  --light-muted: #5f6b7a;
-  --border: #cfd6df;
-  --soft-bg: #f5f7fa;
+  --blue: #253176;
+  --blue-dark: #253176;
+  --blue-soft: #f0f2f8;
+  --orange: #bf1731;
+  --text: #172033;
+  --muted: #475569;
+  --light-muted: #64748b;
+  --border: #dce1eb;
+  --soft-bg: #f7f8fb;
   --bg: #ffffff;
   --max-width: 1180px;
 }
@@ -89,9 +89,9 @@ header {
 }
 
 .site-logo {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
