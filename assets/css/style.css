@@ -88,12 +88,7 @@ header {
   font-weight: 800;
 }
 
-.site-logo {
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+.site-logo { width: 220px; max-width: 100%; height: auto; display: block; }
 
 .identity-text span {
   display: block;
@@ -573,7 +568,37 @@ footer {
   color: var(--muted);
 }
 
-a:focus-visible {
-  outline: 3px solid var(--orange);
-  outline-offset: 4px;
+/* Rebrand: designer colours, clear navigation and publication hierarchy. */
+.header-main { min-height: 112px; padding-top: 16px; padding-bottom: 16px; }
+.nav-bar { background: white; border-top-color: var(--border); }
+.nav a { color: var(--blue); border: 0; }
+.nav a:first-child { border-left: 0; }
+.nav a.active { background: var(--blue); }
+.section-label { border-left-color: var(--orange); }
+a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+.skip-link { position: absolute; left: 16px; top: -100px; background: white; padding: 12px 18px; z-index: 10; }
+.skip-link:focus { top: 12px; }
+.publication-feature { border-top: 4px solid var(--blue); padding-top: 24px; }
+.publication-feature h2 { font-size: clamp(1.55rem, 2.7vw, 2rem); line-height: 1.25; }
+.publication-feature h2 a { color: var(--blue); }
+.publication-meta { font-size: .85rem; color: var(--muted); margin: 18px 0 12px; }
+.journal-name { color: var(--muted); font-size: .92rem; }
+.publication-details dl { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 12px 18px; }
+.publication-details dt { font-weight: 700; color: var(--muted); }
+.publication-details dd { margin: 0; }
+.citation-box { margin-top: 28px; padding: 24px; background: var(--soft-bg); border-left: 3px solid var(--orange); }
+.citation-box p { margin: 0; overflow-wrap: anywhere; }
+.text-link { font-weight: 700; }
+.side-card-body, .profile-table td { overflow-wrap: anywhere; }
+@media(max-width:560px) {
+ .header-main { padding: 16px 0; min-height: auto; }
+ .site-logo { width: 200px; }
+ .nav { flex-wrap: wrap; overflow: visible; }
+ .nav a { padding: 12px 13px; }
+ .publication-details dl { grid-template-columns: 1fr; gap: 4px; }
+ .publication-details dd { margin-bottom: 12px; }
+ .main-layout { gap: 22px; }
+ .plain-box, .citation-box { padding: 18px; }
 }
+
+.paper-subtitle { display: block; margin-top: 12px; font-size: .72em; line-height: 1.4; font-weight: 400; }
