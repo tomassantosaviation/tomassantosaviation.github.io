@@ -572,3 +572,8 @@ footer {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
